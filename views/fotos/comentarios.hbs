@@ -1,0 +1,24 @@
+ 
+<div>
+    <img class="imgPrincipal" src="{{foto.urlImg}}">   
+    <h2>Titulo: {{foto.titulo}}</h2>
+    <p>{{foto.descripcion}}</p>
+</div>
+
+<div class="comentarios">
+
+    <h3>Comenta!</h3>
+    <form action="/comentarios/crear/{{foto.id}}" method="POST">
+    <div>
+    <label for="comentario">Introduce tu comentario</label>
+    <input type="text" id="comentario" name="comentario" required="true">
+    </div>
+    <button type="submit">Comentar</button>
+    </form>
+
+    <h3>Comentarios</h3>
+    {{#each comentarios}}
+        <h5>{{username}}</h5>
+        <p>{{comentario}}</p>
+    {{/each}}
+</div>

@@ -1,0 +1,19 @@
+<a href="">Tus fotos comentadas (no implementado)</a>
+
+<div class="listaFotos">
+    {{#each fotos}}
+        <div class="card">
+            <img class="imgPrincipal" src="{{urlImg}}">    
+            <div>
+                <span>Titulo: {{titulo}}</span>
+                <p>{{descripcion}}</p>
+                    <p style="color:green">Likes: {{likes}}</p>
+                    <p style="color:red">Dislike: {{dislikes}}</p>
+                <div>
+                    <a style="color:red" href="/fotos/eliminar/{{id}}">ELIMINAR FOTO!</a>
+                    <a style="color:blue" href="/fotos/editar/{{id}}">EDITAR FOTO!</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

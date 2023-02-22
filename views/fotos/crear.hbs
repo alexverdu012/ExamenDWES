@@ -1,0 +1,27 @@
+<h1>Crear una foto</h1>
+<form action="/fotos/crear" method="POST">
+<div>
+    <label for="titulo">Titulo</label>
+    <input type="text" id="titulo" name="titulo" required="true">
+</div>
+<div>
+    <label for="urlImg">Url de la imagen</label>
+    <input type="text" id="urlImg" name="urlImg" required="true">
+</div>
+<div>
+    <label for="descripcion">Breve descripcion</label>
+    <input type="text" id="descripcion" name="descripcion" required="true">
+</div>
+<button type="submit">Crear!</button>
+</form>
+<!-- 
+        id INT PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(40) NOT NULL,
+    urlImg VARCHAR(50) NOT NULL,
+    descripcion TEXT,
+    likes INT DEFAULT 0,
+    dislikes INT DEFAULT 0,
+    user_id INT,
+    postedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT user_id FOREIGN KEY(user_id) REFERENCES Users(id)
+-->

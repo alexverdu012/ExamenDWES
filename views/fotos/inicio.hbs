@@ -1,0 +1,41 @@
+
+
+<div class="menu">
+    <ul>
+        <li>
+            <a href="/masvotadas">Mas votadas</a>
+        </li>
+        <li>
+             <a href="/menosvotadas">Menos votadas</a>
+        </li>
+        <li>
+             <a href="/comentadas">Comentadas</a>
+        </li>
+        
+    </ul>
+</div>
+
+<h1>Lista de fotos</h1>
+
+<div class="listaFotos">
+    {{#each fotos}}
+
+        <div class="card">
+            <img class="imgPrincipal" src="{{urlImg}}">    
+            <div>
+                <span>Titulo: {{titulo}}</span>
+                <p>{{descripcion}}</p>
+                <div>
+                    <span>Likes: {{likes}} <a style="color:green" href="/fotos/like/{{id}}">Dar like!</a></span>
+                    <span>Dislike: {{dislikes}} <a style="color:red" href="/fotos/dislike/{{id}}">Dar like!</a></span>
+                </div>
+                
+                <a href="/comentarios/{{id}}">Comentarios...</a>
+            </div>
+            
+      
+        </div>
+
+    {{/each}}
+</div>
+

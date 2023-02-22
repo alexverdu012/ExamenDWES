@@ -1,0 +1,29 @@
+
+
+<h1>Crear una foto</h1>
+<form action="/fotos/editar/{{foto.id}}" method="POST">
+<div>
+    <label for="titulo">Titulo</label>
+    <input value="{{foto.titulo}}" type="text" id="titulo" name="titulo" required="true">
+</div>
+
+<div>
+    <img class="imgPrincipal" src="{{foto.urlImg}}">   
+    <label for="urlImg">Url de la imagen</label>
+    <input value="{{foto.urlImg}}" type="text" id="urlImg" name="urlImg" required="true">
+</div>
+<div>
+    <label for="descripcion">Breve descripcion</label>
+    <input value="{{foto.descripcion}}" type="text" id="descripcion" name="descripcion" required="true">
+</div>
+<button type="submit">Editar!</button>
+</form>
+<div class="comentarios">
+
+    <h3>Comentarios</h3>
+    {{#each comentarios}}
+        <h5>{{username}}</h5>
+        <p>{{comentario}}</p>
+        <a href="/comentarios/delete/{{id}}">Eliminar comentario</a>
+    {{/each}}
+</div>
